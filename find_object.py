@@ -2,7 +2,7 @@ import torch
 import cv2
 
 model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
-img_path = 'my_image/1.png'
+img_path = 'my_image/plus.png'
 results = model(img_path)
 df = results.pandas().xyxy[0]
 microwaves = df[df['name'] == 'microwave']
